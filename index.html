@@ -8,13 +8,10 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: Arial, sans-serif; background: #0d1117; color: #ffffff; }
 
-        /* ANIMASI FADE IN */
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
         }
-
-        /* ANIMASI TYPING */
         @keyframes typing {
             from { width: 0; }
             to { width: 100%; }
@@ -23,7 +20,6 @@
             50% { border-color: transparent; }
         }
 
-        /* HEADER */
         header {
             background: #161b22;
             padding: 60px 20px;
@@ -48,7 +44,6 @@
             animation: fadeIn 1s ease 2.5s both;
         }
 
-        /* ABOUT */
         .about {
             max-width: 800px;
             margin: 50px auto;
@@ -59,7 +54,6 @@
         .about h2 { color: #58a6ff; margin-bottom: 15px; }
         .about p { color: #8b949e; line-height: 1.8; }
 
-        /* SKILLS */
         .skills {
             background: #161b22;
             padding: 50px 20px;
@@ -81,14 +75,60 @@
             transition: transform 0.3s ease, background 0.3s ease;
             cursor: pointer;
         }
-
-        /* HOVER EFFECT PADA SKILLS */
         .skill-list span:hover {
             transform: translateY(-5px) scale(1.1);
             background: #2ea043;
         }
 
-        /* FOOTER */
+        /* PROJECTS SECTION */
+        .projects {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 0 20px;
+            animation: fadeIn 1s ease 0.8s both;
+        }
+        .projects h2 {
+            color: #58a6ff;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .project-card {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 10px;
+            padding: 25px;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: #58a6ff;
+        }
+        .project-card h3 { color: #58a6ff; margin-bottom: 10px; }
+        .project-card p { color: #8b949e; font-size: 0.9rem; line-height: 1.6; margin-bottom: 15px; }
+        .project-tag {
+            display: inline-block;
+            background: #21262d;
+            color: #8b949e;
+            padding: 3px 10px;
+            border-radius: 10px;
+            font-size: 0.8rem;
+            margin: 3px 2px;
+        }
+        .project-link {
+            display: inline-block;
+            margin-top: 15px;
+            color: #58a6ff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+        .project-link:hover { color: #ffffff; }
+
         footer {
             text-align: center;
             padding: 30px;
@@ -126,6 +166,34 @@
             <span>CSS</span>
             <span>Git</span>
             <span>GitHub</span>
+        </div>
+    </section>
+
+    <section class="projects">
+        <h2>Projects</h2>
+        <div class="project-grid">
+
+            <div class="project-card">
+                <h3>SiswaGIG</h3>
+                <p>Platform marketplace freelance untuk pelajar kampus. Menghubungkan pelajar yang memerlukan perkhidmatan dengan pelajar yang menawarkan kemahiran.</p>
+                <span class="project-tag">HTML</span>
+                <span class="project-tag">CSS</span>
+                <span class="project-tag">Group Project</span>
+                <span class="project-tag">CSC264</span>
+                <br>
+                <a href="https://github.com/izwan-codes" class="project-link">→ View on GitHub</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Portfolio Website</h3>
+                <p>Personal portfolio website dibina menggunakan HTML dan CSS tulen. Di-deploy menggunakan GitHub Pages.</p>
+                <span class="project-tag">HTML</span>
+                <span class="project-tag">CSS</span>
+                <span class="project-tag">GitHub Pages</span>
+                <br>
+                <a href="https://izwan-codes.github.io/izwan-portfolio/" class="project-link">→ View Live</a>
+            </div>
+
         </div>
     </section>
 
