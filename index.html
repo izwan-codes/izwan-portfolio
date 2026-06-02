@@ -8,15 +8,45 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: Arial, sans-serif; background: #0d1117; color: #ffffff; }
 
+        /* ANIMASI FADE IN */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ANIMASI TYPING */
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
+
         /* HEADER */
         header {
             background: #161b22;
             padding: 60px 20px;
             text-align: center;
             border-bottom: 2px solid #30363d;
+            animation: fadeIn 1s ease;
         }
-        header h1 { font-size: 2.5rem; color: #58a6ff; }
-        header p { font-size: 1.1rem; color: #8b949e; margin-top: 10px; }
+        header h1 {
+            font-size: 2.5rem;
+            color: #58a6ff;
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 3px solid #58a6ff;
+            animation: typing 2.5s steps(20) forwards,
+                       blink 0.7s step-end infinite;
+        }
+        header p {
+            font-size: 1.1rem;
+            color: #8b949e;
+            margin-top: 10px;
+            animation: fadeIn 1s ease 2.5s both;
+        }
 
         /* ABOUT */
         .about {
@@ -24,6 +54,7 @@
             margin: 50px auto;
             padding: 0 20px;
             text-align: center;
+            animation: fadeIn 1s ease 0.3s both;
         }
         .about h2 { color: #58a6ff; margin-bottom: 15px; }
         .about p { color: #8b949e; line-height: 1.8; }
@@ -33,6 +64,7 @@
             background: #161b22;
             padding: 50px 20px;
             text-align: center;
+            animation: fadeIn 1s ease 0.6s both;
         }
         .skills h2 { color: #58a6ff; margin-bottom: 25px; }
         .skill-list {
@@ -46,6 +78,14 @@
             padding: 8px 20px;
             border-radius: 20px;
             font-size: 0.9rem;
+            transition: transform 0.3s ease, background 0.3s ease;
+            cursor: pointer;
+        }
+
+        /* HOVER EFFECT PADA SKILLS */
+        .skill-list span:hover {
+            transform: translateY(-5px) scale(1.1);
+            background: #2ea043;
         }
 
         /* FOOTER */
@@ -55,8 +95,14 @@
             color: #8b949e;
             border-top: 1px solid #30363d;
             margin-top: 50px;
+            animation: fadeIn 1s ease 0.9s both;
         }
-        footer a { color: #58a6ff; text-decoration: none; }
+        footer a {
+            color: #58a6ff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        footer a:hover { color: #ffffff; }
     </style>
 </head>
 <body>
@@ -84,7 +130,7 @@
     </section>
 
     <footer>
-        <p>© 2026 Izwan | 
+        <p>© 2026 Izwan |
         <a href="https://github.com/izwan-codes" target="_blank">GitHub: izwan-codes</a>
         </p>
     </footer>
